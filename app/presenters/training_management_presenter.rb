@@ -29,7 +29,8 @@ class TrainingManagementPresenter < ActionView::Base
 
   private
   def sidebar_item user, index
-    "<div class=\"trow list_#{index}\" id=\"sidebar-row-#{user.id}\">
+    "<div class=\"trow list_#{index}\" id=\"sidebar-row-#{user.id}\"
+      style=\"background-color: #{user.profile.status_color if user.profile.status}\">
       <div class=\"tcell stt\">#</div>
       <div class=\"tcell name trainee_name\" title=\"#{user.name}\">
       #{link_to user.name, eval("#{@namespace}_user_path(user)")}
