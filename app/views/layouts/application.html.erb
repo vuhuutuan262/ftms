@@ -67,24 +67,7 @@
             <div class="modal-body">
               <div class="login-main login-agileits">
                 <h1>Login</h1>
-                <%= form_for resource, as: resource_name, url: session_path(resource_name), method: "post" do |f| %>
-                  <p>Email</p>
-                  <%= f.email_field :email, placeholder: t("user.fields.email"), class: "form-control" %>
-                  <p>Password</p>
-                  <%= f.password_field :password, autocomplete: "off",
-                    placeholder: t("user.fields.password"), class: "form-control" %>
-                  <% if devise_mapping.rememberable? -%>
-                    <div class="checkbox">
-                      <span><%= f.check_box :remember_me, class: "character-checkbox" %></span>
-                      <span><%= f.label :remember_me, t("signins.remember"), class: "fixed-label" %></span>
-                      <span class="pull-right">
-                <%= link_to t("user.forgot_password"),
-                  new_user_password_path(resource_name) %>
-              </span>
-                    </div>
-                  <% end %>
-                  <%= f.submit t("user.login"), class: "btn btn-custom btn-lg btn-block" %>
-                <% end %>
+                  <%= render 'users/sessions/new' %>
                 <h3>Not a member yet ? <a class="sign-in popup-top-anim"
                 id="login_register_btn"> Sign Up Now !</a></h3>
               </div>
