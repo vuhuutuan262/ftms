@@ -1,0 +1,14 @@
+<h1><%= t "user.forgot_password" %></h1>
+<%= form_for resource, as: resource_name,
+  url: password_path(resource_name), html: {method: :post} do |f| %>
+
+  <%= devise_error_messages! %>
+  <div class="form-group">
+    <%= f.email_field :email, placeholder: t("user.fields.email"),
+      class: "form-control" %>
+  </div>
+  <%= f.submit t("user.sent_mail_forgot"),
+    class: "btn btn-custom btn-lg btn-block" %>
+<% end %>
+<h4><a class="sign-in popup-top-anim"
+  id="lost_login_btn"><%= t "staticpages.member" %></a></h4>

@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   mount ActionCable.server => "/cable"
 
   filter :locale
-  devise_for :users, path: "auth", controllers: {sessions: "sessions"},
+  devise_for :users, path: "auth",
+    controllers: {sessions: "sessions", passwords: "passwords"},
     path_names: {sign_in: "login", sign_out: "logout"}
 
   namespace :admin do

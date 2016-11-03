@@ -211,3 +211,36 @@
     </div>
   </section>
 </div>
+<div class="modal fade" id="login-modal" tabindex="-1"
+  role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div id="div-forms" class="modal-content">
+      <div id="login-form">
+        <div class="modal-body">
+          <div class="login-main login-agileits">
+            <%= render "users/sessions/new" %>
+          </div>
+        </div>
+      </div>
+      <div id="lost-form">
+        <div class="modal-body">
+          <div class="login-main login-agileits">
+            <%= render "devise/passwords/new" %>
+          </div>
+        </div>
+      </div>
+      <div id="register-form">
+        <div class="modal-body">
+          <div class="login-main login-agileits">
+            <h1><%= t "staticpages.signup" %></h1>
+            <h4>
+              <a class="sign-in popup-top-anim"
+                id="register_login_btn"><%= t "staticpages.member" %></a>
+            </h4>
+            <a id="register_lost_btn"><%= t "user.forgot_password" %></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

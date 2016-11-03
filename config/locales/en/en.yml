@@ -41,6 +41,8 @@ en:
     update: "Update"
   signins:
     banner: "Login"
+    not_member: "Not a member yet ? "
+    signup_now: " Sign Up Now !"
   datetime: &datetime
     formats:
       default: "%Y/%m/%d"

@@ -99,7 +99,11 @@
               </ul>
             </li>
           <% else %>
-            <li><%= link_to t("staticpages.login"), new_user_session_path %></li>
+            <li>
+              <a data-toggle="modal" data-target="#login-modal">
+                <%= t "staticpages.login" %>
+              </a>
+            </li>
           <% end %>
         </ul>
       </div>

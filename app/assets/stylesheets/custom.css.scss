@@ -90,6 +90,7 @@ html {
 
   #portfolio, #principles {
     padding: 80px 0;
+    background-color: white !important;
 
     .title, .portfolio-content {
       font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -740,5 +741,100 @@ textarea {
 
   #date_submit {
     margin-right: 5px;
+  }
+}
+#login-modal {
+  display: none;
+}
+
+#login-modal {
+  input[type="submit"] {
+    font-size: 1em;
+    color: #FFFFFF;
+    padding: 0.6em 1em 0.6em 1em;
+    display: block;
+    border: none;
+    margin: 3em auto 0em;
+    outline: none;
+    background: #d6921e;
+    border: 1px solid #d6921e;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    width: 30%;
+    cursor: pointer;
+    font-family: 'Roboto Condensed', sans-serif;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+  }
+
+  input[type="submit"]:hover {
+    background: transparent;
+    color: #d6921e;
+  }
+
+  input[type="checkbox"]{
+    margin-left: 0px;
+  }
+
+  input[type="text"], input[type="password"] {
+    display: block;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    width: 100%;
+    outline: none;
+    font-size: 0.95em;
+    color: #ffffff;
+    font-weight: 400;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    padding: 10px 0px;
+    text-align: center;
+    margin: 0 0 2em 0em;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+
+  p {
+    font-size: 1em;
+    color: #fff;
+  }
+  h1{
+    text-align: center;
+    font-size: 1.7em;
+    color: #d6921e;
+    margin-bottom: 1em;
+    font-weight: 100;
+  }
+  .login h3 a {
+    color: #ecba65;
+    margin-left: 6px;
+  }
+  .login h3 a:hover {
+    color: #fff;
+  }
+  .login-main {
+    margin: 0 auto;
+    border: 1px solid #fff;
+    padding: 3em;
+    background: black;
+  }
+  .login p {
+    font-size: 1em;
+    color: #fff;
+  }
+  #register-form {
+    display: none;
+  }
+  #lost-form {
+    display: none;
   }
 }

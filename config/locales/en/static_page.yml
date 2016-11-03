@@ -4,6 +4,8 @@ en:
     profile: "Profile"
     logout: "Logout"
     login: "Sign in"
+    signup: "Sign up"
+    member: "Already a member?"
     home: "Home"
     trainer: "Trainer"
     admin: "Admin"
