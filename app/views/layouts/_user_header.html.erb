@@ -65,6 +65,19 @@
                 data: {toggle: "modal", target: "#feed-back-modal"} %>
             </li>
             <li class="dropdown user user-menu">
+              <a href="#" class="dropdown-toggle avatar" data-toggle="dropdown">
+                <%= avatar_user_tag current_user, "user-image", Settings.image_size_50 %></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-menu-header text-center">
+                  <strong>Settings</strong>
+                </li>
+                <li class="m_2"><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+                <li class="m_2"><a href="#"><i class="fa fa-wrench"></i> Settings</a></li>
+                <li class="divider"></li>
+                <li class="m_2"><a href="#"><i class="fa fa-lock"></i> Logout</a></li>
+              </ul>
+            </li>
+            <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <%= avatar_user_tag current_user, "user-image", Settings.image_size_50 %>
                 <span class="hidden-xs"><%= current_user.name %></span>
@@ -100,6 +113,12 @@
             </li>
           <% else %>
             <li><%= link_to t("staticpages.login"), new_user_session_path %></li>
+            <div class="container">
+              <div class="row">
+                <h1 class="text-center">Modal Login with jQuery Effects</h1>
+                <p class="text-center"><a href="#" class="btn btn-primary btn-lg" role="button" data-toggle="modal" data-target="#login-modal">Open Login Modal</a></p>
+              </div>
+            </div>
           <% end %>
         </ul>
       </div>

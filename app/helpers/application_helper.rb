@@ -1,6 +1,18 @@
 module ApplicationHelper
   include SessionsHelper
 
+  def resource_name
+    :user
+  end
+
+  def resource
+    @resource ||= User.new
+  end
+
+  def devise_mapping
+    @devise_mapping ||= Devise.mappings[:user]
+  end
+
   def full_title page_title = ""
     base_title = t "staticpages.framgia"
     page_title.present? ? "#{page_title} | #{base_title}" : base_title

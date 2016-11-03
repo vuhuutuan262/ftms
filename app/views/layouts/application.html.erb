@@ -55,4 +55,87 @@
     </body>
   <% end %>
   <%= render "shared/feed_back_form" %>
+
+  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Begin # DIV Form -->
+        <div id="div-forms">
+          <!-- Begin # Login Form -->
+          <form id="login-form">
+            <div class="modal-body">
+              <div class="login-main login-agileits">
+                <h1>Login</h1>
+                <%= form_for resource, as: resource_name, url: session_path(resource_name), method: "post" do |f| %>
+                  <p>Email</p>
+                  <%= f.email_field :email, placeholder: t("user.fields.email"), class: "form-control" %>
+                  <p>Password</p>
+                  <%= f.password_field :password, autocomplete: "off",
+                    placeholder: t("user.fields.password"), class: "form-control" %>
+                  <% if devise_mapping.rememberable? -%>
+                    <div class="checkbox">
+                      <span><%= f.check_box :remember_me, class: "character-checkbox" %></span>
+                      <span><%= f.label :remember_me, t("signins.remember"), class: "fixed-label" %></span>
+                      <span class="pull-right">
+                <%= link_to t("user.forgot_password"),
+                  new_user_password_path(resource_name) %>
+              </span>
+                    </div>
+                  <% end %>
+                  <%= f.submit t("user.login"), class: "btn btn-custom btn-lg btn-block" %>
+                <% end %>
+                <h3>Not a member yet ? <a class="sign-in popup-top-anim"
+                id="login_register_btn"> Sign Up Now !</a></h3>
+              </div>
+            </div>
+          </form>
+          <%= javascript_include_tag "signin", "data-turbolinks-track": true %>
+
+          <!-- End # Login Form -->
+
+          <!-- Begin | Lost Password Form -->
+          <form id="lost-form" style="display:none;">
+            <div class="modal-body">
+              <div id="div-lost-msg">
+                <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                <span id="text-lost-msg">Type your e-mail.</span>
+              </div>
+              <input id="lost_email" class="form-control" type="text" placeholder="E-Mail (type ERROR for error effect)" required>
+            </div>
+            <div class="modal-footer">
+              <div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+              </div>
+              <div>
+                <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
+                <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
+              </div>
+            </div>
+          </form>
+          <!-- End | Lost Password Form -->
+
+          <!-- Begin | Register Form -->
+          <form id="register-form" style="display:none;">
+            <div class="modal-body">
+              <h1>Sign Up</h1>
+              <form action="#" method="post">
+                <p>Email</p>
+                <input type="text" placeholder="example@gmail.com" name="mail" required="">
+                <p>Password</p>
+                <input type="password" placeholder="Password" name="Password" required="">
+                <input type="submit" value="Login">
+              </form>
+              <h3> <a class="sign-in popup-top-anim"
+              id="register_login_btn"> Already a member?</a></h3>
+            </div>
+          </form>
+          <!-- End | Register Form -->
+
+        </div>
+        <!-- End # DIV Form -->
+
+      </div>
+    </div>
+  </div>
 </html>
