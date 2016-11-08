@@ -214,15 +214,36 @@
     <div id="div-forms">
       <div id="login-form">
         <div class="modal-body">
-          <div class="login-main login-agileits">
-            <%= render "users/sessions/new" %>
+          <div class="content-top" ><%= t "signins.banner" %></div>
+          <div class="content-body">
+            <div class="line-or"></div>
+            <div content-body-bottom form-content>
+              <%= render "users/sessions/new" %>
+            </div>
+            <div class="content-footer">
+              <a id="login_lost_btn" class="see-more pull-right">
+                <%= t "user.forgot_password" %>
+              </a>
+              <a id="login_register_btn" class="see-more pull-left">
+                <%= t "signins.signup_now" %>
+              </a>
+            </div>
           </div>
         </div>
       </div>
       <div id="lost-form">
         <div class="modal-body">
-          <div class="login-main login-agileits">
-            <%= render "devise/passwords/new" %>
+          <div class="content-top" ><%= t "user.forgot_password" %></div>
+          <div class="content-body">
+            <div class="line-or"></div>
+            <div content-body-bottom form-content>
+              <%= render "devise/passwords/new" %>
+            </div>
+            <div class="content-footer">
+              <a class="see-more pull-left" id="lost_login_btn">
+                <%= t "staticpages.member" %>
+              </a>
+            </div>
           </div>
         </div>
       </div>

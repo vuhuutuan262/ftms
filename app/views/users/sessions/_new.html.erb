@@ -1,25 +1,19 @@
-<h1><%= t "signins.banner" %></h1>
-<%= form_for resource, as: resource_name, url: session_path(resource_name),
-  id: "login-form", format: :json, remote: true do |f| %>
-  <%= f.email_field :email, placeholder: t("user.fields.email"), type: "text" %>
-  <%= f.password_field :password, autocomplete: "off",
-    placeholder: t("user.fields.password"), class: "form-control" %>
-  <% if devise_mapping.rememberable? %>
-    <div class="checkbox">
-      <span>
-        <%= f.check_box :remember_me, class: "character-checkbox" %>
-      </span>
-      <h5>
-        <%= f.label :remember_me, t("signins.remember"), class: "fixed-label" %>
-      </h5>
-      <span class="pull-right">
-        <a id="login_lost_btn"><%= t "user.forgot_password" %></a>
-      </span>
-    </div>
+<div class="form-modal-login">
+  <%= form_for resource, as: resource_name, url: session_path(resource_name),
+    id: "login-form", format: :json, remote: true do |f| %>
+    <%= f.email_field :email, placeholder: t("user.fields.email"), type: "text" %>
+    <%= f.password_field :password, autocomplete: "off",
+      placeholder: t("user.fields.password"), class: "form-control" %>
+    <% if devise_mapping.rememberable? %>
+      <div class="checkbox">
+        <span>
+          <%= f.check_box :remember_me, class: "character-checkbox" %>
+        </span>
+        <h5>
+          <%= f.label :remember_me, t("signins.remember"), class: "fixed-label" %>
+        </h5>
+      </div>
+    <% end %>
+    <%= f.submit t("user.login"), class: "btn btn-custom btn-lg btn-block" %>
   <% end %>
-  <%= f.submit t("user.login"), class: "btn btn-custom btn-lg btn-block" %>
-  <h4>
-    <%= t "signins.not_member" %><a class="sign-in popup-top-anim"
-  id="login_register_btn"><%= t "signins.signup_now" %></a>
-  </h4>
-<% end %>
+</div>

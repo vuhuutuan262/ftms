@@ -748,11 +748,58 @@ textarea {
 }
 
 #login-modal {
+  .form-modal-login {
+    margin-left: 17%
+  }
+  .content-top {
+    font-size: 18px;
+    color: #fff;
+    background: #000;
+    opacity: .9;
+    border-bottom: 1px solid #39390c;
+    text-align: center;
+    padding: 15px 0;
+  }
+  .content-body, .content-body a, .content-body p {
+    font-size: 13px;
+    color: #cecece;
+  }
+
+  .content-body-bottom {
+    padding: 0 35px;
+  }
+  .content-footer a.pull-right {
+    float: right;
+  }
+  .content-footer a {
+    color: #e1e300;
+    text-decoration: underline;
+    display: block;
+  }
+
+  .content-footer {
+    background: #1a1a1a;
+    color: #cecece;
+    font-size: 13px;
+    text-align: center;
+    padding: 10px 35px 14px;
+    height: 28px
+  }
+
+  .content-body .line-or {
+    font-size: 14px;
+    color: #999;
+    width: 100%;
+    margin: 5px auto 0;
+    text-align: center;
+    background: url(http://i.imgur.com/E7avrna.png) center center no-repeat;
+    height: 20px;
+  }
   #div-forms {
-    width: 400px;
+    width: 380px;
     height: 100%;
     margin-left: 18%;
-    background-image: url(http://i.imgur.com/598C82z.jpg);
+    background-image: url(http://i.imgur.com/UMY0snS.jpg);
   }
   a {
     color: rgb(225,227,0);
@@ -762,14 +809,13 @@ textarea {
   }
   input[type="submit"] {
     font-size: 1em;
-    color: #FFFFFF;
+    color: black;
     padding: 0.6em 1em 0.6em 1em;
     display: block;
     border: none;
-    margin-left: 35%;
+    margin-left: 25%;
     outline: none;
     background: rgb(225,227,0);
-    border: 1px solid #d6921e;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -o-border-radius: 3px;
@@ -787,20 +833,20 @@ textarea {
 
   input[type="submit"]:hover {
     background: transparent;
-    color: #d6921e;
+    color: white;
   }
 
   input[type="checkbox"]{
     margin-left: 0px;
   }
 
-  input[type="text"], input[type="password"] {
+  input[type="text"], input[type="password"], input[type="email"] {
     display: block;
     background: none;
     background-color: white !important;
     border: none;
     border-bottom: 1px solid #ffffff;
-    width: 100%;
+    width: 80%;
     outline: none;
     font-size: 0.95em;
     color: black;
@@ -812,7 +858,7 @@ textarea {
     border-radius: 3px;
     padding: 10px 0px;
     text-align: center;
-    margin: 0 0 2em 0em;
+    margin: 0 0 1em 0em;
     font-family: 'Roboto Condensed', sans-serif;
   }
 
@@ -995,3 +1041,4 @@ textarea {
 .dropdown:hover .dropdown-menu-right {
   display: block;
 }
+
