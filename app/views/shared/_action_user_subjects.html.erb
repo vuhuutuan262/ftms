@@ -28,7 +28,7 @@
       <% end %>
     </li>
     <li>
-      <%= link_to [@namespace.to_sym, @supports.course,
+      <%= link_to [:edit, @namespace.to_sym, @supports.course,
         @supports.course_subject] do %>
         <i class="fa fa-pencil" aria-hidden="true"></i>
         <%= t "buttons.edit" %>

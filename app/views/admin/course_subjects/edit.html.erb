@@ -22,6 +22,14 @@
           <br>
           <div class="row">
             <div class="col-md-12">
+              <%= f.text_field :chatwork_room_id, class: "form-control",
+                required: true,
+                placeholder: I18n.t("subjects.form.input_chatwork_room_id") %>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-12">
               <%= f.file_field :image, class: "form-control" %>
             </div>
           </div>

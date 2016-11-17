@@ -8,7 +8,7 @@ class CourseSubject < ApplicationRecord
   mount_uploader :image, ImageUploader
 
   ATTRIBUTES_PARAMS = [:subject_name, :image, :subject_description, :subject_content,
-    :course_id, :row_order_position]
+    :course_id, :row_order_position, :chatwork_room_id]
 
   belongs_to :subject
   belongs_to :course

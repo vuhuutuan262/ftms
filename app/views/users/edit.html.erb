@@ -11,6 +11,10 @@
         <%= f.text_field :name, class: "form-control" %>
       </div>
       <div class="form-group">
+        <%= f.label :chatwork_id, t("user.fields.chatwork_id") %>
+        <%= f.text_field :chatwork_id, class: "form-control" %>
+      </div>
+      <div class="form-group">
         <%= f.label :avatar, t("user.fields.avatar") %>
         <%= f.file_field :avatar %>
       </div>

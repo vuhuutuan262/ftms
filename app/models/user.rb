@@ -19,7 +19,7 @@ class User < ApplicationRecord
   ]
 
   ATTRIBUTES_PARAMS = [:name, :email, :password,
-    :password_confirmation, :avatar, :trainer_id, role_ids: [],
+    :password_confirmation, :avatar, :trainer_id, :chatwork_id, role_ids: [],
     profile_attributes: ATTRIBUTES_PROFILE_PARAMS]
 
   USER_ATTRIBUTES_PARAMS = [:name, :password, :password_confirmation, :avatar,

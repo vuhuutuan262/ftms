@@ -43,6 +43,7 @@ gem "jquery-countdown-rails"
 gem "cloudinary"
 gem "pundit"
 gem "activerecord-import"
+gem "chatwork"
 
 group :development, :test do
   gem "pry-rails"

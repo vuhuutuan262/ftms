@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161114074801) do
+ActiveRecord::Schema.define(version: 20161117085926) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "trackable_type"
@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 20161114074801) do
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
     t.datetime "deleted_at"
+    t.integer  "chatwork_room_id"
     t.index ["course_id"], name: "index_course_subjects_on_course_id", using: :btree
     t.index ["deleted_at"], name: "index_course_subjects_on_deleted_at", using: :btree
     t.index ["subject_id"], name: "index_course_subjects_on_subject_id", using: :btree
@@ -579,6 +580,7 @@ ActiveRecord::Schema.define(version: 20161114074801) do
     t.string   "last_sign_in_ip"
     t.datetime "deleted_at"
     t.string   "type",                   default: "Trainee"
+    t.integer  "chatwork_id"
     t.index ["deleted_at"], name: "index_users_on_deleted_at", using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
