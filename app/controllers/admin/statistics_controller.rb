@@ -32,7 +32,7 @@ class Admin::StatisticsController < ApplicationController
 
   def load_statistic_view
     start_date = params[:start_date] ? params[:start_date].to_date : Date.today.beginning_of_year
-    location_ids = params[:location_ids] ? params[:location_ids] : Location.all.map(&:id)
+    location_ids = params[:location_ids]
     end_date = params[:end_date] ? params[:end_date].to_date : Date.today
     stage_ids = params[:stage_ids] ? params[:stage_ids] : Stage.all.map(&:id)
     @statistics = Supports::Statistic.new location_ids: location_ids,

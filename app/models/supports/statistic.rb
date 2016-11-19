@@ -9,7 +9,7 @@ class Supports::Statistic
   def trainee_types
     @trainee_types ||= if @location_ids.nil?
       UserType.all.collect{|u| Hash[:name, u.name, :y, u.profiles.size]}
-        .delete_if{|p| p[:y] == 0}.sort_by{|u| u[:y]}.reverse
+        .delete_if{|p| p[:y] > -1}.sort_by{|u| u[:y]}.reverse
     else
       temp = []
       Location.where(id: @location_ids).each do |location|
